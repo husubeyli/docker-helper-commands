@@ -13,7 +13,7 @@
 Use [curl](https://curl.haxx.se/) to install comands.
 
 ```
-$ curl -LO https://raw.githubusercontent.com/munisisazade/docker-helper-commands/master/install.sh && bash install.sh
+$ curl -LO https://raw.githubusercontent.com/husubeyli/docker-helper-commands/master/install.sh && bash install.sh
 ```
 
 ### List of Usefull Comands ### 
