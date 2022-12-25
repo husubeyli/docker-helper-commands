@@ -1,5 +1,5 @@
 #!/bin/bash
-# Author Munis Isazade Django developer
+# Author Elvin Husubayli Django developer
 
 VERSION="0.3"
 ERROR_STATUS=0
@@ -12,7 +12,7 @@ ROOT_COMMAND_DIRECTORY=/usr/local/bin/
 #	ROOT_COMMAND_DIRECTORY=/bin/
 #fi
 WORKING_DIRECTRY=$(pwd)
-ISSUE_URL="https://github.com/munisisazade/docker-helper-commands/issues"
+ISSUE_URL="https://github.com/husubeyli/docker-helper-commands/issues"
 
 
 #usage: ChangeColor $COLOR text/background
@@ -51,7 +51,7 @@ function ChangeColor()
 }
 
 function usage {
-	echo -e "Thans for using this tool:"
+	echo -e "Thanks for using this tool:"
 	if [ "$EUID" -ne 0 ]; then
 		echo -e "You install $(whoami) user all shels here $LOCAL_COMMAND_DIRECTORY"
 	else
@@ -77,7 +77,7 @@ function build_docker_shell() {
 	touch build-docker
 	echo "#!/bin/bash" >> build-docker
 	echo "" >> build-docker
-	echo "echo -e \"Command Created by Munis\"" >> build-docker
+	echo "echo -e \"Command Created by Husubayli\"" >> build-docker
 	echo "echo -e \"Building docker-compose containers ...\"" >> build-docker
 	echo "docker-compose up --build -d" >> build-docker
 	echo "echo -e \"Successfuly build  ....  [OK]\"" >> build-docker
@@ -87,7 +87,7 @@ function down_docker_shell() {
 	touch down-docker
 	echo "#!/bin/bash" >> down-docker
 	echo "" >> down-docker
-	echo "echo -e \"Command Created by Munis\"" >> down-docker
+	echo "echo -e \"Command Created by Husubayli\"" >> down-docker
 	echo "echo -e \"Down all containers .. width docker-composefile\"" >> down-docker
 	echo "" >> down-docker
 	echo "docker-compose down" >> down-docker
@@ -97,7 +97,7 @@ function connect_docker_shell() {
 	touch connect-docker
 	echo "#!/bin/bash" >> connect-docker
 	echo "" >> connect-docker
-	echo "echo -e \"Command Created by Munis\"" >> connect-docker
+	echo "echo -e \"Command Created by Husubayli\"" >> connect-docker
 	echo "echo -e \"Connecting with \$1  inside \$2 container with docker command \"" >> connect-docker
 	echo "docker exec -it \$2 \$1" >> connect-docker
 }
@@ -118,7 +118,7 @@ function restart_docker_shell() {
 	touch restart-docker
 	echo "#!/bin/bash" >> restart-docker
 	echo "" >> restart-docker
-	echo "echo -e \"Command Created by Munis\"" >> restart-docker
+	echo "echo -e \"Command Created by Husubayli\"" >> restart-docker
 	echo "echo -e \"Restart all containers\"" >> restart-docker
 	echo "docker-compose restart" >> restart-docker
 	echo "" >> restart-docker
@@ -128,7 +128,7 @@ function migrate_docker_shell() {
 	touch migrate-docker
 	echo "#!/bin/bash" >> migrate-docker
 	echo "" >> migrate-docker
-	echo "echo -e \"Command Created by Munis\"" >> migrate-docker
+	echo "echo -e \"Command Created by Husubayli\"" >> migrate-docker
 	echo "echo -e \"Migrate django project inside \$1 container ...\"" >> migrate-docker
 	echo "" >> migrate-docker
 	echo "docker exec -it \$1 sh -c \"/venv/bin/python manage.py migrate\"" >> migrate-docker
@@ -139,7 +139,7 @@ function logs_docker_shell() {
 	touch logs-docker
 	echo "#!/bin/bash" >> logs-docker
 	echo "" >> logs-docker
-	echo "echo -e \"Command Created by Munis\"" >> logs-docker
+	echo "echo -e \"Command Created by Husubayli\"" >> logs-docker
 	echo "echo -e \"Tails all logs on docker containers\"" >> logs-docker
 	echo "" >> logs-docker
 	echo "docker-compose logs -f" >> logs-docker
@@ -151,7 +151,7 @@ function backup_database_shell() {
 	touch backup-database-docker
 	echo "#!/bin/bash" >> backup-database-docker
 	echo "" >> backup-database-docker
-	echo "echo -e \"Command Created by Munis\"" >> backup-database-docker
+	echo "echo -e \"Command Created by Husubayli\"" >> backup-database-docker
 	echo "echo -e \"Backup Posgresql Database\"" >> backup-database-docker
 	echo "" >> backup-database-docker
 	echo "if [ \"\$1\" ]; then" >> backup-database-docker
@@ -168,7 +168,7 @@ function restore_database_shell() {
 	touch restore-database-docker
 	echo "#!/bin/bash" >> restore-database-docker
 	echo "" >> restore-database-docker
-	echo "echo -e \"Command Created by Munis\"" >> restore-database-docker
+	echo "echo -e \"Command Created by Husubayli\"" >> restore-database-docker
 	echo "echo -e \"Restore Posgresql Database\"" >> restore-database-docker
 	echo "" >> restore-database-docker
 	echo "if [[ \"\$1\" && \"\$2\" ]]; then" >> restore-database-docker
